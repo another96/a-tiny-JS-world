@@ -7,24 +7,44 @@ import { print } from './js/lib.js';
    */
 
 // ======== OBJECTS DEFINITIONS ========
-// Define your objects here
+const dog = {
+   species: 'dog',
+   name: 'Toby',
+   gender: 'male',
+   legs: 4,
+   hands: 0,
+   saying: 'woof-woof!'
+};
+const cat = {
+   species: 'cat',
+   name: 'Garfield',
+   gender: 'female',
+   legs: 4,
+   hands: 0,
+   saying: 'meow'
+};
 
+const man = {
+   species: 'human',
+   name: 'Ted',
+   gender: 'male',
+   legs: 2,
+   hands: 2,
+   saying: 'My code has no errors'
+};
+
+const woman = {
+   species: 'human',
+   name: 'Jennifer',
+   gender: 'female',
+   legs: 2,
+   hands: 2,
+   saying: 'I found errors in your code'
+};
 
 // ======== OUTPUT ========
-/* Use print(message) for output.
-   Default tag for message is <pre>. Use print(message,'div') to change containing element tag.
-
-   Message can contain HTML markup. You may also tweak index.html and/or styles.css.
-   However, please, REFRAIN from improving visuals at least until your code is reviewed
-   so code reviewers might focus on a single file that is index.js.
-   */
-
-/* Print examples:
-   print('ABC');
-   print('<strong>ABC</strong>');
-   print('<strong>ABC</strong>', 'div');
-
-   print('human; John; male; 2; 2; Hello world!; Rex, Tom, Jenny');
-   print('human; <strong>John</strong>; male; 2; 2; <em>Hello world!</em>; Rex, Tom, Jenny');
-   print('human; <strong>John</strong>; male; 2; 2; <em>Hello world!</em>; Rex, Tom, Jenny', 'div');
-   */
+const myCreatures = [dog, cat, man, woman];
+const objectKeys = ["species", "name", "gender", "legs", "hands", "saying"];
+myCreatures.forEach((creature) => {
+   print(objectKeys.map((keys) => creature[keys]).join('; '));
+});
